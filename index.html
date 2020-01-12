@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Lucky 9</title>
+    <link rel="stylesheet" href="g.css">
+</head>
+<body>
+    <h2 id = "num1"></h2>
+    <h2 id = "num2"></h2>
+    <h1 id = "notice">Lucky 9</h1>
+    <img id="c1" src="1.png" alt="">
+    <img id="c2" src="1.png" alt=""><br><br><br>
+    <button id="but">Press Me</button>
+
+</body>
+<script>
+document.getElementById("but").addEventListener("click", function(){
+    const num1 = Math.floor(Math.random() * 10)
+    const num2 = Math.floor(Math.random() * 10)
+    document.getElementById("num1").innerHTML = num1;
+    document.getElementById("num2").innerHTML = num2;
+    if (num1 + num2 == 9){
+        document.getElementById("notice").innerHTML = "You win"
+    }
+    else{
+        document.getElementById("notice").innerHTML = "You lose"
+    }
+    var images = ["0.png","1.png","2.png","3.png","4.png","5.png","6.png","7.png","8.png","9.png"]
+    c1.src = images[num1]
+    c2.src = images[num2]
+
+});
+</script>
+</html>
